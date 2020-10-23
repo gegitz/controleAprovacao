@@ -1,0 +1,7 @@
+.label {
+  margin: 2px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
