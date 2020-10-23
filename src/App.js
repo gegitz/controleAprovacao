@@ -11,27 +11,27 @@ export default class App extends Component {
         {
           id: '1',
           description: 'Módulo 01 - Fundamentos (0 - 100)',
-          nota: 49,
+          nota: '',
         },
         {
           id: '2',
           description: 'Módulo 02 - Angular (0 - 100)',
-          nota: 62,
+          nota: '',
         },
         {
           id: '3',
           description: 'Módulo 03 - React (0 - 100)',
-          nota: 70,
+          nota: '',
         },
         {
           id: '4',
           description: 'Módulo 04 - Vue (0 - 100)',
-          nota: 80,
+          nota: '',
         },
         {
           id: '5',
           description: 'Módulo 05 - Desafio Final (0 - 100)',
-          nota: 80,
+          nota: '',
         },
       ],
     };

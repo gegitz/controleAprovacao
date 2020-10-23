@@ -5,7 +5,11 @@ export default class Calculations extends Component {
   getTotalNote() {
     const { grades } = this.props;
     return grades.reduce((acc, curr) => {
-      return (acc += curr.nota !== '' ? curr.nota : 0);
+      let nota = 0;
+      if (curr.nota !== '' && !Number.isNaN(curr.nota)) {
+        nota = curr.nota;
+      }
+      return (acc += nota);
     }, 0);
   }
   render() {
@@ -18,12 +22,15 @@ export default class Calculations extends Component {
       : 'Sim';
     return (
       <div className={css.container}>
-        <span>Nota Total: {totalNote}</span>
-        <span>Percentual Total {totalPercent}</span>
-        <span>Aprovação pela média (60%)? {approvedByAverage}</span>
-        <span>
-          Aprovação pelo percentual total (70%)? {approvedByPercentual}
-        </span>
+        <h5 className={css.title}>Cálculos</h5>
+        <div className={css.content}>
+          <span>Nota Total: {totalNote}</span>
+          <span>Percentual Total {totalPercent}</span>
+          <span>Aprovação pela média (60%)? {approvedByAverage}</span>
+          <span>
+            Aprovação pelo percentual total (70%)? {approvedByPercentual}
+          </span>
+        </div>
       </div>
     );
   }
